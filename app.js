@@ -1,7 +1,6 @@
 //Initial Vars
 const bdoBossAlert = require(__dirname+'/bdoBossAlert.js');
 const Discord = require('discord.js');
-const token = "ITSASECRET";
 const bot = new Discord.Client();
 var emitter = require('./emitter');
 /////////////////////////////////////////
@@ -12,7 +11,7 @@ bot.on('ready', () => {
   console.log('Logged Into Server');
 
   //set channel id
-  var channel = bot.channels.get('335536906832052235');
+  var channel = bot.channels.get('404066262034022420');
   channel.send("Looking Out For BDO Boss Spawns...");
 
   //A BDO Boss Spawned
@@ -29,4 +28,4 @@ bot.on('ready', () => {
   
 });
 //Login Bot User
-bot.login(token);
+bot.login(process.env.BOT_TOKEN);
